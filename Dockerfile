@@ -1,4 +1,4 @@
-FROM alpine:3.10.0
+FROM alpine:3.10
 LABEL maintainer "mats@viacard.com"
 
 RUN apk add --no-cache  lighttpd \
@@ -28,9 +28,6 @@ RUN mkdir /var/run/lighttpd; \
     touch /var/run/lighttpd/php-fastcgi.socket; \
     chown -R lighttpd:lighttpd /var/run/lighttpd; \
     rm -rf /var/www/localhost
-
-#RUN mv -f /var/www/lighttpd.conf    /etc/lighttpd/lighttpd.conf
-#RUN mv -f /var/www/mod_fastcgi.conf /etc/lighttpd/mod_fastcgi.conf
 
 EXPOSE 8080
 
