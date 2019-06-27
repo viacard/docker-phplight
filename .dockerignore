@@ -1,0 +1,14 @@
+*~
+*.bak
+.git
+.gitignore
+.dockerignore
+.vscode
+Dockefile
+docker-compose.yml
+docker-compose.yaml
+README.md
+LICENCE
+LICENCE.md
+CONTRIBUTING.md
+notes.txt
