@@ -4,9 +4,22 @@ A small web server with PHP support built with Alpine and lighttpd.
 
 The current version are using Alpine 3.10.0, lighthttpd 1.4.54 and PHP 7.3.6 
 
-## Using and Serving
+## Serving
 
 The html- and php-files are being served from `/var/www`. Directory listing is disabled and the automatic index files are `index.php`, `index.html` and `index.htm`.
+
+## Using
+To use this image create a new Dockerfile like this:
+```
+FROM viacard/phplight
+RUN echo '<?php phpinfo();' > /var/www/index.php
+```
+And then build, run and test it:
+```
+docker build -t testpl .
+docker run -d --rm -p 8080:8080 testpl 
+links http://localhost:8080
+```
 
 ## Repo
 
