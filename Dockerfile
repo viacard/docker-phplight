@@ -2,6 +2,9 @@ FROM alpine:3.10
 LABEL maintainer "mats@viacard.com"
 
 RUN apk add --no-cache  lighttpd \
+                        sqlite-libs \
+			php7-sqlite3 \
+			php7-mbstring \
 			php7-common \
 			php7-iconv \
 			php7-json \
