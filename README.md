@@ -31,6 +31,9 @@ FROM alpine:3.10
 LABEL maintainer "mats@viacard.com"
 
 RUN apk add --no-cache  lighttpd \
+                        sqlite-libs \
+ 			php7-sqlite3 \
+ 			php7-mbstring \
 			php7-common \
 			php7-iconv \
 			php7-json \
@@ -66,3 +69,4 @@ CMD ["/usr/sbin/lighttpd","-D", "-f", "/etc/lighttpd/lighttpd.conf"]
 ## Release history
 
 - v1.0 June 27 2019 - Initial release
+- v1.1 July 8 2019 - Added support for sqlite and mbstrings
